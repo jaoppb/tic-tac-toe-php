@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Sans", "sans-serif";
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(231, 231, 231);
+    gap: 40px;
+}
+
+form {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 2px;
+    background-color: rgb(0, 0, 0);
+
+    input {
+        display: none;
+    }
+
+    .block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(86, 204, 196);
+        font-size: 4rem;
+
+        &:not(:has(input)):not(:active):hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.play-again {
+    width: 400px;
+    height: 80px;
+    font-size: 2rem;
+    background-color: rgb(180, 180, 180);
+    border: none;
+    outline: 0;
+    font-weight: 700;
+    
+    &:not(:active):hover {
+        cursor: pointer;
+    }
+}
